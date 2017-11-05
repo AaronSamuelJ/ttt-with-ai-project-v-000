@@ -77,8 +77,8 @@ class Game
 end
 
 # class Game
-#   attr_accessor :board, :player_1, :player_2, :timer
-#
+#   attr_accessor :board, :player_1, :player_2
+# 
 #   WIN_COMBINATIONS = [
 #   [0, 1, 2],
 #   [3, 4, 5],
@@ -89,15 +89,14 @@ end
 #   [0, 4, 8],
 #   [6, 4, 2]
 #   ]
-#
+# 
 #   def initialize(player_1 = Players::Human.new("X"), player_2 = Players::Human.new("O"), wargame = false, board = Board.new)
 #     @player_1 = player_1
 #     @player_2 = player_2
 #     @board = board
 #     @wargame = wargame
-#     @timer = 1.5
 #   end
-#
+# 
 #   def current_player
 #     board.turn_count.even?  ? player_1 : player_2
 #   end
@@ -117,7 +116,7 @@ end
 #   end
 #   def turn
 #     puts "It's now #{current_player.token}'s turn."
-#     input = current_player.move(board, timer).to_i #changed here
+#     input = current_player.move(board).to_i #changed here
 #     if board.valid_move?(input.to_s)
 #       board.update(input, current_player)
 #       system('clear')
